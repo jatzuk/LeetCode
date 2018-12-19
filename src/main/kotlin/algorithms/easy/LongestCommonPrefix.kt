@@ -41,14 +41,14 @@ fun longestCommonPrefixVerticalScanning(strs: Array<String>): String {
     return strs[0]
 }
 
-// T = O(S); s = sum of all chars
+// T = O(s); s = sum of all chars
 // S = O(m * log(n)) ; m space for log(n) recursive calls
 fun longestCommonPrefixDivideAndConquer(strs: Array<String>): String {
     if (strs.isEmpty()) return ""
     return longestCommonPrefixRecursive(strs, 0, strs.size - 1)
 }
 
-fun longestCommonPrefixRecursive(strs: Array<String>, l: Int, r: Int): String {
+private fun longestCommonPrefixRecursive(strs: Array<String>, l: Int, r: Int): String {
     if (l == r) return strs[l]
     val mid = (l + r) / 2
     val lcpL = longestCommonPrefixRecursive(strs, l, mid)
@@ -56,10 +56,33 @@ fun longestCommonPrefixRecursive(strs: Array<String>, l: Int, r: Int): String {
     return commonPrefix(lcpL, lcpR)
 }
 
-fun commonPrefix(left: String, right: String): String {
+private fun commonPrefix(left: String, right: String): String {
     val min = Math.min(left.length, right.length)
     for (i in 0 until min) {
         if (left[i] != right[i]) return left.substring(0, i)
     }
     return left.substring(0, min)
+}
+
+//  T = O(s * log(n)); s = sum of all chars
+//  S = O(1)
+fun longestCommonPrefixBinarySearch(strs: Array<String>): String {
+    if (strs.isEmpty()) return ""
+    var min = Int.MAX_VALUE
+    for (str in strs) if (str.length < min) min = str.length
+
+    var low = 1
+    var hight = min
+    while (low <= hight) {
+        val mid = (low + hight) / 2
+        if (isCommonPrefix(strs, mid)) low = mid + 1
+        else hight = mid - 1
+    }
+    return strs[0].substring(0, (low + hight) / 2)
+}
+
+private fun isCommonPrefix(strs: Array<String>, len: Int): Boolean {
+    val str = strs[0].substring(0, len)
+    for (i in 1 until strs.size) if (!strs[i].startsWith(str)) return false
+    return true
 }

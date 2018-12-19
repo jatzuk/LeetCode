@@ -35,4 +35,10 @@ class LongestCommonPrefix {
         assertEquals("fl", longestCommonPrefixDivideAndConquer(arrayOf("flower", "flow", "flight")))
         assertEquals("", longestCommonPrefixDivideAndConquer(arrayOf("dog", "racecar", "car")))
     }
+
+    @Test
+    fun longestCommonPrefixBinarySearch() {
+        assertEquals("fl", algorithms.easy.longestCommonPrefixBinarySearch(arrayOf("flower", "flow", "flight")))
+        assertEquals("", algorithms.easy.longestCommonPrefixBinarySearch(arrayOf("dog", "racecar", "car")))
+    }
 }
