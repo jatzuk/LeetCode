@@ -1,5 +1,5 @@
-import algorithms.easy.ListNode
-import algorithms.easy.mergeTwoLists
+package algorithms.easy
+
 import org.junit.Before
 import org.junit.Ignore
 import org.junit.Test
