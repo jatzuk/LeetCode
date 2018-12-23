@@ -1,5 +1,8 @@
 package algorithms.easy
 
+import org.junit.Assert.assertEquals
+import org.junit.Test
+
 /**
  ** Created with passion and love
  **    for project LeetCodePractice
@@ -14,11 +17,10 @@ package algorithms.easy
  **                                           ***___***
  */
 
-// O(n)
-// O(1)
-fun removeDuplicates(nums: IntArray): Int {
-    if (nums.isEmpty()) return 0
-    var i = 0
-    for (j in 1 until nums.size) if (nums[j] > nums[i]) nums[++i] = nums[j]
-    return ++i
+class RemoveElement {
+    @Test
+    fun removeElementTest() {
+        assertEquals(2, removeElement(intArrayOf(3, 2, 2, 3), 3))
+        assertEquals(5, removeElement(intArrayOf(0, 1, 2, 2, 3, 0, 4, 2), 2))
+    }
 }

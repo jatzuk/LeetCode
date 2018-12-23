@@ -16,9 +16,9 @@ package algorithms.easy
 
 // O(n)
 // O(1)
-fun removeDuplicates(nums: IntArray): Int {
+fun removeElement(nums: IntArray, value: Int): Int {
     if (nums.isEmpty()) return 0
-    var i = 0
-    for (j in 1 until nums.size) if (nums[j] > nums[i]) nums[++i] = nums[j]
-    return ++i
+    var j = 0
+    for (i in 0 until nums.size) if (nums[i] != value) nums[j++] = nums[i]
+    return j
 }
