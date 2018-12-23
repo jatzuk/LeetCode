@@ -29,7 +29,7 @@ fun longestCommonPrefixHorizontalScanning(strs: Array<String>): String {
 }
 
 // T = O(s); s = sum of all chars
-// S = (1)
+// S = O(1)
 fun longestCommonPrefixVerticalScanning(strs: Array<String>): String {
     if (strs.isEmpty()) return ""
     for (i in 0 until strs[0].length) {
