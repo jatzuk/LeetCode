@@ -26,10 +26,16 @@ class MaximumSubarray {
     }
 
     @Test
-
     fun maxSubArrayTestLinear() {
         assertEquals(4, maxSubArrayLinear(intArrayOf(-2, 1, -3, 4, -1)))
         assertEquals(6, maxSubArrayLinear(intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4)))
         assertEquals(-1, maxSubArrayLinear(intArrayOf(-1)))
+    }
+
+    @Test
+    fun maxSubArrayTestDivideAndConquer() {
+        assertEquals(4, maxSubArrayDivideAndConquer(intArrayOf(-2, 1, -3, 4, -1), 0, 4))
+        assertEquals(6, maxSubArrayDivideAndConquer(intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4), 0, 8))
+        assertEquals(-1, maxSubArrayDivideAndConquer(intArrayOf(-1), 0, 0))
     }
 }
