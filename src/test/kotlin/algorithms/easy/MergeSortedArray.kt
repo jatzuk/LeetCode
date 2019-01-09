@@ -1,5 +1,6 @@
 package algorithms.easy
 
+import org.junit.Assert.assertArrayEquals
 import org.junit.Test
 
 /**
@@ -17,9 +18,17 @@ import org.junit.Test
  */
 
 class MergeSortedArray {
+    var nums1 = intArrayOf(1, 2, 3, 0, 0, 0)
+    var nums2 = intArrayOf(2, 5, 6)
+
     @Test
     fun mergeTest() {
-        merge(intArrayOf(1, 2, 3, 0, 0, 0), 3, intArrayOf(2, 5, 6), 3)
-        merge(intArrayOf(4, 6, 7, 0, 0, 0), 3, intArrayOf(1, 2, 5), 3)
+        merge(nums1, 3, nums2, 3)
+        assertArrayEquals(intArrayOf(1, 2, 2, 3, 5, 6), nums1)
+
+        nums1 = intArrayOf(4, 6, 7, 0, 0, 0)
+        nums2 = intArrayOf(1, 2, 5)
+        merge(nums1, 3, nums2, 3)
+        assertArrayEquals(intArrayOf(1, 2, 4, 5, 6, 7), nums1)
     }
 }
