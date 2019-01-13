@@ -19,6 +19,8 @@ class TreeNode(var value: Int = 0) {
     var right: TreeNode? = null
 }
 
+// O(n); n - number of all nodes
+// O(n)
 fun isSameTree(p: TreeNode?, q: TreeNode?): Boolean {
     return if (p == null && q == null) true
     else if (p == null|| q == null) false
