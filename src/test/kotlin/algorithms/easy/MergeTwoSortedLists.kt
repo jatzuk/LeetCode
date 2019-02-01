@@ -31,7 +31,7 @@ class MergeTwoSortedLists {
     @Ignore
     @Test
     fun nodeEquality() {
-        assertNodeEquals(list, list1)
+        assertNodesEquals(list, list1)
     }
 
     @Test
@@ -40,7 +40,7 @@ class MergeTwoSortedLists {
     }
 
     @Throws(AssertionError::class)
-    fun assertNodeEquals(n1: ListNode, n2: ListNode): Boolean {
+    fun assertNodesEquals(n1: ListNode, n2: ListNode) {
         var node2: ListNode? = n2
         for (node1 in n1) {
             val n1v = node1.value
@@ -48,11 +48,10 @@ class MergeTwoSortedLists {
             if (n1v != n2v) throw AssertionError("\nExpected :$n1v\nActual   :$n2v")
             node2 = node2?.next
         }
-        return true
     }
 
     @Throws(AssertionError::class)
-    fun assertMergeEquals(array: IntArray, listNode: ListNode?): Boolean {
+    fun assertMergeEquals(array: IntArray, listNode: ListNode?) {
         for ((index, node) in listNode!!.withIndex()) {
             if (array[index] != node.value) {
                 throw AssertionError("""|
@@ -60,6 +59,5 @@ class MergeTwoSortedLists {
                     |Actual   :${node.value}""".trimMargin())
             }
         }
-        return true
     }
 }
