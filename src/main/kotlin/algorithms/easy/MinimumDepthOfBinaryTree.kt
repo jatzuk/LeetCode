@@ -1,5 +1,6 @@
 package algorithms.easy
 
+import java.util.*
 import kotlin.math.min
 
 /*
@@ -16,12 +17,34 @@ import kotlin.math.min
  *                                           ***___***
  */
 
+fun minDepth(root: TreeNode?) = dfs(root) // bfs(root)
+
 // O(V + E)
 // O(V)
-fun minDepth(root: TreeNode?): Int {
-    return root?.let {
-        val left = minDepth(root.left)
-        val right = minDepth(root.right)
-        if (left == 0 || right == 0) left + right + 1 else min(left, right) + 1
-    } ?: 0
-}
+private fun dfs(root: TreeNode?): Int = root?.let {
+    val left = dfs(root.left)
+    val right = dfs(root.right)
+    if (left == 0 || right == 0) left + right + 1 else min(left, right) + 1
+} ?: 0
+
+// O(V + E)
+// O(V)
+private fun bfs(root: TreeNode?) = root?.let {
+    val queue: Queue<TreeNode> = LinkedList()
+    queue.add(root)
+    var depth = 0
+    while (queue.isNotEmpty()) {
+        depth++
+        repeat(queue.size) {
+            val left = queue.peek().left
+            val right = queue.peek().right
+            if (left == null && right == null) return depth
+            with(queue) {
+                left?.let { add(it) }
+                right?.let { add(it) }
+                poll()
+            }
+        }
+    }
+    depth
+} ?: 0

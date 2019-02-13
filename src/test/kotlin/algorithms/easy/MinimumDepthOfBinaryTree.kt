@@ -27,13 +27,15 @@ class MinimumDepthOfBinaryTree {
     }
 
     val tree1 = TreeNode()
-    val tree2_1 = TreeNode().apply { left = TreeNode() }
+    val tree2Left = TreeNode().apply { left = TreeNode() }
+    val tree2Right = TreeNode().apply { right = TreeNode() }
 
     @Test
     fun minDepthTest() {
         assertEquals(2, minDepth(tree2))
         assertEquals(1, minDepth(tree1))
         assertEquals(0, minDepth(null))
-        assertEquals(2, minDepth(tree2_1))
+        assertEquals(2, minDepth(tree2Left))
+        assertEquals(2, minDepth(tree2Right))
     }
 }
