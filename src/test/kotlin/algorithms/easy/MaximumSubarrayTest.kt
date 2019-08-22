@@ -17,7 +17,7 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class MaximumSubarray {
+class MaximumSubarrayTest {
     @Test
     fun maxSubArrayTest() {
         assertEquals(4, maxSubArray(intArrayOf(-2, 1, -3, 4, -1)))

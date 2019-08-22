@@ -1,12 +1,12 @@
 package algorithms.easy
 
-import org.junit.Assert.assertEquals
+import org.junit.Assert.assertArrayEquals
 import org.junit.Test
 
 /**
  ** Created with passion and love
  **    for project LeetCodePractice
- **        by Jatzuk on 23.12.2018
+ **        by Jatzuk on 09-Jan-19
  **                                            *_____*
  **                                           *_*****_*
  **                                          *_(O)_(O)_*
@@ -17,10 +17,18 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class RemoveElement {
+class MergeSortedArrayTest {
+    var nums1 = intArrayOf(1, 2, 3, 0, 0, 0)
+    var nums2 = intArrayOf(2, 5, 6)
+
     @Test
-    fun removeElementTest() {
-        assertEquals(2, removeElement(intArrayOf(3, 2, 2, 3), 3))
-        assertEquals(5, removeElement(intArrayOf(0, 1, 2, 2, 3, 0, 4, 2), 2))
+    fun mergeTest() {
+        merge(nums1, 3, nums2, 3)
+        assertArrayEquals(intArrayOf(1, 2, 2, 3, 5, 6), nums1)
+
+        nums1 = intArrayOf(4, 6, 7, 0, 0, 0)
+        nums2 = intArrayOf(1, 2, 5)
+        merge(nums1, 3, nums2, 3)
+        assertArrayEquals(intArrayOf(1, 2, 4, 5, 6, 7), nums1)
     }
 }

@@ -17,7 +17,7 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class LengthOfLastWord {
+class LengthOfLastWordTest {
     @Test
     fun lengthOfLastWordTest() {
         assertEquals(5, lengthOfLastWord("Hello World"))

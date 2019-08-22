@@ -17,7 +17,7 @@ import org.junit.Test
  *                                           ***___***
  */
 
-class BalancedBinaryTree {
+class BalancedBinaryTreeTest {
     val balanced = TreeNode(3).apply {
         left = TreeNode(9)
         right = TreeNode(20).apply {

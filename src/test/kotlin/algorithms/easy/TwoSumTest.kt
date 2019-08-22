@@ -17,7 +17,7 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class TwoSum {
+class TwoSumTest {
     @Test
     fun bruteForce() {
         assertArrayEquals(intArrayOf(0, 1), twoSumBruteForce(intArrayOf(2, 7, 11, 15), 9))

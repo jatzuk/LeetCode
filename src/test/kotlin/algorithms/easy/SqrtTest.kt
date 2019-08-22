@@ -17,7 +17,7 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class Sqrt {
+class SqrtTest {
     @Test
     fun mySqrtTest() {
         assertEquals(2, mySqrt(4))

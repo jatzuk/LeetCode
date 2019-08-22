@@ -17,7 +17,7 @@ import org.junit.Test
  *                                           ***___***
  */
 
-class MinimumDepthOfBinaryTree {
+class MinimumDepthOfBinaryTreeTest {
     val tree2 = TreeNode().apply {
         left = TreeNode()
         right = TreeNode().apply {

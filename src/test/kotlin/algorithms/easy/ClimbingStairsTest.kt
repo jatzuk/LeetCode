@@ -17,7 +17,7 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class ClimbingStairs {
+class ClimbingStairsTest {
     @Test
     fun climbStairsBruteForceTest() {
         assertEquals(2, climbStairsBruteForce(2))

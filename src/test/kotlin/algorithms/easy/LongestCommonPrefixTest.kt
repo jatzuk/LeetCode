@@ -17,7 +17,7 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class LongestCommonPrefix {
+class LongestCommonPrefixTest {
     @Test
     fun longestCommonPrefixHorizontalScanningTest() {
         assertEquals("fl", longestCommonPrefixHorizontalScanning(arrayOf("flower", "flow", "flight")))
@@ -38,7 +38,7 @@ class LongestCommonPrefix {
 
     @Test
     fun longestCommonPrefixBinarySearch() {
-        assertEquals("fl", algorithms.easy.longestCommonPrefixBinarySearch(arrayOf("flower", "flow", "flight")))
-        assertEquals("", algorithms.easy.longestCommonPrefixBinarySearch(arrayOf("dog", "racecar", "car")))
+        assertEquals("fl", longestCommonPrefixBinarySearch(arrayOf("flower", "flow", "flight")))
+        assertEquals("", longestCommonPrefixBinarySearch(arrayOf("dog", "racecar", "car")))
     }
 }

@@ -1,12 +1,12 @@
 package algorithms.easy
 
-import org.junit.Assert.assertArrayEquals
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
  ** Created with passion and love
  **    for project LeetCodePractice
- **        by Jatzuk on 09-Jan-19
+ **        by Jatzuk on 13-Dec-18
  **                                            *_____*
  **                                           *_*****_*
  **                                          *_(O)_(O)_*
@@ -16,19 +16,12 @@ import org.junit.Test
  **                                          *_________*
  **                                           ***___***
  */
-
-class MergeSortedArray {
-    var nums1 = intArrayOf(1, 2, 3, 0, 0, 0)
-    var nums2 = intArrayOf(2, 5, 6)
-
+    
+class ReverseIntegerTest {
     @Test
-    fun mergeTest() {
-        merge(nums1, 3, nums2, 3)
-        assertArrayEquals(intArrayOf(1, 2, 2, 3, 5, 6), nums1)
-
-        nums1 = intArrayOf(4, 6, 7, 0, 0, 0)
-        nums2 = intArrayOf(1, 2, 5)
-        merge(nums1, 3, nums2, 3)
-        assertArrayEquals(intArrayOf(1, 2, 4, 5, 6, 7), nums1)
+    fun reverseTest() {
+        assertEquals(321, reverse(123))
+        assertEquals(-321, reverse(-123))
+        assertEquals(21, reverse(120))
     }
 }

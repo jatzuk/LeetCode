@@ -18,7 +18,7 @@ import java.lang.AssertionError
  *                                           ***___***
  */
 
-class BinaryTreeLevelOrderTraversalII {
+class BinaryTreeLevelOrderTraversalIITest {
     val tree = TreeNode(3).apply {
         left = TreeNode(9)
         right = TreeNode(20).apply {

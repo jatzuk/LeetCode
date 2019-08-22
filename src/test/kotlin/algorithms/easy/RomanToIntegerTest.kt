@@ -17,7 +17,7 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class RomanToInteger {
+class RomanToIntegerTest {
     @Test
     fun romanToIntTestBasics() {
         assertEquals(1, romanToInt("I"))

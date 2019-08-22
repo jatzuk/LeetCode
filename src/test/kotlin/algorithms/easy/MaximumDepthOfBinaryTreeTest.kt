@@ -17,7 +17,7 @@ import org.junit.Test
  *                                           ***___***
  */
 
-class MaximumDepthOfBinaryTree {
+class MaximumDepthOfBinaryTreeTest {
     val tree = TreeNode().apply {
         left = TreeNode(9)
         right = TreeNode(20).apply {

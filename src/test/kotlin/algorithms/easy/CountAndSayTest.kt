@@ -46,7 +46,7 @@ The following are the terms from n=1 to n=10 of the count-and-say sequence:
 10.     13211311123113112211
  */
 
-class CountAndSay {
+class CountAndSayTest {
     @Test
     fun countAndSayTest() {
         assertEquals("1", countAndSay(1))

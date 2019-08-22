@@ -6,7 +6,7 @@ import org.junit.Test
 /**
  ** Created with passion and love
  **    for project LeetCodePractice
- **        by Jatzuk on 23.12.2018
+ **        by Jatzuk on 16-Dec-18
  **                                            *_____*
  **                                           *_*****_*
  **                                          *_(O)_(O)_*
@@ -17,10 +17,12 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class RemoveDuplicatesFromSortedArray {
+class PalindromeNumberTest {
     @Test
-    fun removeDuplicatesTest() {
-        assertEquals(2, removeDuplicates(intArrayOf(1, 1, 2)))
-        assertEquals(5, removeDuplicates(intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4)))
+    fun isPalindromeTest() {
+        assertEquals(true, isPalindrome(121))
+        assertEquals(true, isPalindrome(12321))
+        assertEquals(false, isPalindrome(-121))
+        assertEquals(false, isPalindrome(10))
     }
 }

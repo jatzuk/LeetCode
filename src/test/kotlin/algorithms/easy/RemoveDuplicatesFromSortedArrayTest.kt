@@ -6,7 +6,7 @@ import org.junit.Test
 /**
  ** Created with passion and love
  **    for project LeetCodePractice
- **        by Jatzuk on 13-Dec-18
+ **        by Jatzuk on 23.12.2018
  **                                            *_____*
  **                                           *_*****_*
  **                                          *_(O)_(O)_*
@@ -16,12 +16,11 @@ import org.junit.Test
  **                                          *_________*
  **                                           ***___***
  */
-    
-class ReverseInteger {
+
+class RemoveDuplicatesFromSortedArrayTest {
     @Test
-    fun reverseTest() {
-        assertEquals(321, reverse(123))
-        assertEquals(-321, reverse(-123))
-        assertEquals(21, reverse(120))
+    fun removeDuplicatesTest() {
+        assertEquals(2, removeDuplicates(intArrayOf(1, 1, 2)))
+        assertEquals(5, removeDuplicates(intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4)))
     }
 }

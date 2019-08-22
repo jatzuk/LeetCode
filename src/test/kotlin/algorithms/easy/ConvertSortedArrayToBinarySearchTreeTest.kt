@@ -16,7 +16,7 @@ import org.junit.Test
  *                                           ***___***
  */
 
-class ConvertSortedArrayToBinarySearchTree {
+class ConvertSortedArrayToBinarySearchTreeTest {
     @Test
     fun sortedArrayToBSTTest() {
         treeWalk(sortedArrayToBST(intArrayOf(-10, -3, 0, 5, 9)))

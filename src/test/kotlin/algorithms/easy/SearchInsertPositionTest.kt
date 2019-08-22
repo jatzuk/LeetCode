@@ -17,15 +17,12 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class ImplementstrStr {
+class SearchInsertPositionTest {
     @Test
-    fun strStrTest() {
-        assertEquals(2, strStr("hello", "ll"))
-        assertEquals(-1, strStr("aaaaa", "bba"))
-        assertEquals(0, strStr("a", ""))
-        assertEquals(-1, strStr("aaa", "aaaa"))
-        assertEquals(-1, strStr("mississippi","issipi"))
-        assertEquals(0, strStr("",""))
-        assertEquals(0, strStr("a","a"))
+    fun searchInsertTest() {
+        assertEquals(2, searchInsert(intArrayOf(1, 3, 5, 6), 5))
+        assertEquals(1, searchInsert(intArrayOf(1, 3, 5, 6), 2))
+        assertEquals(4, searchInsert(intArrayOf(1, 3, 5, 6), 7))
+        assertEquals(0, searchInsert(intArrayOf(1, 3, 5, 6), 0))
     }
 }

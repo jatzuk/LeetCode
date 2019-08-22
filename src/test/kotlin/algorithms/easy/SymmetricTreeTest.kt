@@ -17,7 +17,7 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class SymmetricTree {
+class SymmetricTreeTest {
     val symmetric = TreeNode(1).apply {
         left = TreeNode(2).apply {
             left = TreeNode(3)

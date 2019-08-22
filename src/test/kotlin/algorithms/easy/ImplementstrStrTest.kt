@@ -1,12 +1,12 @@
 package algorithms.easy
 
-import org.junit.Assert.assertArrayEquals
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
  ** Created with passion and love
  **    for project LeetCodePractice
- **        by Jatzuk on 31-Dec-18
+ **        by Jatzuk on 23.12.2018
  **                                            *_____*
  **                                           *_*****_*
  **                                          *_(O)_(O)_*
@@ -17,13 +17,15 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class PlusOne {
+class ImplementstrStrTest {
     @Test
-    fun plusOneTest() {
-        assertArrayEquals(intArrayOf(1, 2, 4), plusOne(intArrayOf(1, 2, 3)))
-        assertArrayEquals(intArrayOf(4, 3, 2, 2), plusOne(intArrayOf(4, 3, 2, 1)))
-        assertArrayEquals(intArrayOf(9, 0, 0, 0), plusOne(intArrayOf(8, 9, 9, 9)))
-        assertArrayEquals(intArrayOf(1, 0), plusOne(intArrayOf(9)))
-        assertArrayEquals(intArrayOf(1, 0, 0), plusOne(intArrayOf(9, 9)))
+    fun strStrTest() {
+        assertEquals(2, strStr("hello", "ll"))
+        assertEquals(-1, strStr("aaaaa", "bba"))
+        assertEquals(0, strStr("a", ""))
+        assertEquals(-1, strStr("aaa", "aaaa"))
+        assertEquals(-1, strStr("mississippi","issipi"))
+        assertEquals(0, strStr("",""))
+        assertEquals(0, strStr("a","a"))
     }
 }

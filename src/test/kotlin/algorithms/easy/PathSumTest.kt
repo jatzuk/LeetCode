@@ -17,7 +17,7 @@ import org.junit.Test
  *                                           ***___***
  */
 
-class PathSum {
+class PathSumTest {
     val treeT = TreeNode(5).apply {
         left = TreeNode(4).apply {
             left = TreeNode(11).apply {

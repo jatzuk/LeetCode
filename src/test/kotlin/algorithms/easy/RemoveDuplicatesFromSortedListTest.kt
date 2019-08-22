@@ -17,7 +17,7 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class RemoveDuplicatesFromSortedList {
+class RemoveDuplicatesFromSortedListTest {
     val list = ListNode(1)
     val list1 = ListNode(1)
 

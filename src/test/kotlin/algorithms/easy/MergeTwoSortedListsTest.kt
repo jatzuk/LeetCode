@@ -18,7 +18,7 @@ import org.junit.Test
  **                                           ***___***
  */
 
-class MergeTwoSortedLists {
+class MergeTwoSortedListsTest {
     val list = ListNode(1)
     val list1 = ListNode(1)
 
