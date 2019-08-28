@@ -16,9 +16,9 @@ package algorithms.easy
 
 fun getRow(rowIndex: Int): List<Int> {
     val row = arrayListOf<Int>()
-    for (i in 0 until rowIndex + 1) {
+    for (i in 0..rowIndex) {
         row.add(1)
-        for (j in i - 1 downTo 1) row[j] = row[j] + row[j - 1]
+        for (j in i - 1 downTo 1) row[j] += row[j - 1]
     }
     return row
 }
