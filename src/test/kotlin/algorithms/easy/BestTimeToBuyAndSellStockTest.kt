@@ -39,4 +39,11 @@ class BestTimeToBuyAndSellStockTest {
         assertEquals(4, maxProfit(stocks4))
     }
 
+    @Test
+    fun functionalApproach() {
+        assertEquals(5, maxProfitFunctional(stocks1))
+        assertEquals(0, maxProfitFunctional(stocks2))
+        assertEquals(2, maxProfitFunctional(stocks3))
+        assertEquals(4, maxProfitFunctional(stocks4))
+    }
 }

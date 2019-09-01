@@ -1,5 +1,7 @@
 package algorithms.easy
 
+import kotlin.math.max
+
 /*
  * Created with passion and love
  *    for project LeetCodePractice
@@ -14,7 +16,7 @@ package algorithms.easy
  *                                           ***___***
  */
 
-// T = O(n^2)
+// T = O(n^2); S = O(1)
 fun quadraticComplexity(prices: IntArray): Int {
     if (prices.size < 2) return 0
     var revenue = 0
@@ -26,7 +28,7 @@ fun quadraticComplexity(prices: IntArray): Int {
     return revenue
 }
 
-// T = O(n)
+// T = O(n); S = O(1)
 fun maxProfit(prices: IntArray): Int {
     var max = 0
     var min = Int.MAX_VALUE
@@ -35,4 +37,10 @@ fun maxProfit(prices: IntArray): Int {
         else if (prices[i] - min > max) max = prices[i] - min
     }
     return max
+}
+
+// T = O(n); S = O(1)
+fun maxProfitFunctional(prices: IntArray): Int {
+    var min = Int.MAX_VALUE
+    return prices.fold(0) { acc, i -> if (i < min) min = i; max(acc, i - min) }
 }
