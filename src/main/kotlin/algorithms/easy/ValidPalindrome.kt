@@ -35,11 +35,22 @@ fun isPalindromeNaive(s: String): Boolean {
     return true
 }
 
-// T = O(2n); S = O(n)
+// T = O(n); S = O(n)
 fun isPalindromeFunctional(s: String): Boolean {
     val purified = s.asIterable().filter { it.isLetterOrDigit() }.map { it.toLowerCase() }
     purified.forEachIndexed { i, c -> if (c != purified[purified.size - 1 - i]) return false }
     return true
 }
 
+// T = O(n); S = O(n)
+fun isPalindromeRecursive(s: String): Boolean {
+    fun go(s: String, start: Int, end: Int): Boolean {
+        if (start >= end) return true
+        if (s[start] != s[end]) return false
+        return go(s, start + 1, end - 1)
+    }
+
+    val purified = s.replace("\\W".toRegex(), "").toLowerCase()
+    return go(purified, 0, purified.length - 1)
+}
 
