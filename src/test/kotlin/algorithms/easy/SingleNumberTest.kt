@@ -18,8 +18,8 @@ import org.junit.Test
  */
 
 class SingleNumberTest {
-    private val case1 = intArrayOf(2, 2, 1) //1
-    private val case2 = intArrayOf(4, 1, 2, 1, 2) //4
+    private val case1 = intArrayOf(2, 2, 1)
+    private val case2 = intArrayOf(4, 1, 2, 1, 2)
 
     @Test
     fun singleNumberTest() {
