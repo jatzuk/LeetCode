@@ -16,7 +16,7 @@ import kotlin.collections.HashMap
  *                                           ***___***
  */
 
-// T = O(n); S =
+// T = O(n); S = O(n)
 fun singleNumber(nums: IntArray): Int {
     val map = HashMap<Int, Int>()
     for (item in nums) {
@@ -29,12 +29,14 @@ fun singleNumber(nums: IntArray): Int {
     return map.entries.first { it.value == 1 }.key
 }
 
+// T = O(n); S = O(1)
 fun singleNumberXor(nums: IntArray): Int {
     var result = 0
     for (item in nums) result = item xor result
     return result
 }
 
+// T = O(n); S = O(1)
 fun singleNumberFunctional(nums: IntArray): Int {
     var result = 0
     nums.forEach { result = it xor result }

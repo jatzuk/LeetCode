@@ -32,4 +32,10 @@ class SingleNumberTest {
         assertEquals(1, singleNumberXor(case1))
         assertEquals(4, singleNumberXor(case2))
     }
+
+    @Test
+    fun singleNumberFunctional() {
+        assertEquals(1, singleNumberFunctional(case1))
+        assertEquals(4, singleNumberFunctional(case2))
+    }
 }
