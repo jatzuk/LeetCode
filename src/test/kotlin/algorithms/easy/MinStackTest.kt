@@ -63,21 +63,21 @@ class MinStackTest {
     @Test
     fun arrayListTest() {
         with(MinStackArrayList()) {
-//            push(-2)
-//            push(0)
-//            push(-3)
-//            assertEquals(-3, getMin())
-//            pop()
-//            assertEquals(0, top())
-//            assertEquals(-2, getMin())
-//
-//            push(-2)
-//            push(0)
-//            push(-1)
-//            assertEquals(-2, getMin())
-//            assertEquals(-1, top())
-//            pop()
-//            assertEquals(-2, getMin())
+            push(-2)
+            push(0)
+            push(-3)
+            assertEquals(-3, getMin())
+            pop()
+            assertEquals(0, top())
+            assertEquals(-2, getMin())
+
+            push(-2)
+            push(0)
+            push(-1)
+            assertEquals(-2, getMin())
+            assertEquals(-1, top())
+            pop()
+            assertEquals(-2, getMin())
 
             push(-2)
             push(0)
