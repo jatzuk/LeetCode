@@ -50,4 +50,13 @@ class ValidPalindromeTest {
         assertEquals(case4.first, isPalindromeFunctional(case4.second))
         assertEquals(case5.first, isPalindromeFunctional(case5.second))
     }
+
+    @Test
+    fun recursivePalindrome() {
+        assertEquals(case1.first, isPalindromeRecursive(case1.second))
+        assertEquals(case2.first, isPalindromeRecursive(case2.second))
+        assertEquals(case3.first, isPalindromeRecursive(case3.second))
+        assertEquals(case4.first, isPalindromeRecursive(case4.second))
+        assertEquals(case5.first, isPalindromeRecursive(case5.second))
+    }
 }
