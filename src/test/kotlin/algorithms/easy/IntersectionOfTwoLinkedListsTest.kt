@@ -40,6 +40,12 @@ class IntersectionOfTwoLinkedLists {
     private val list3 = ListNode(4).apply { next = ListNode(5) }
 
     @Test
+    fun intersectionHashTable() {
+        assertEquals(intersection1, getIntersectionNodeHashSet(list1, list1_2))
+        assertEquals(null, getIntersectionNodeHashSet(list1_2, list3))
+    }
+
+    @Test
     fun intersectionTest() {
         assertEquals(intersection1, getIntersectionNode(list1, list1_2))
         assertEquals(null, getIntersectionNode(list1_2, list3))
