@@ -19,17 +19,15 @@ import org.junit.Test
 
 class ExcelSheetColumnTitleTest {
     private val case1 = "A" to 1
-    private val case2 = "B" to 2
-    private val case3 = "Z" to 26
-    private val case4 = "AB" to 28
-    private val case5 = "ZY" to 701
+    private val case2 = "Z" to 26
+    private val case3 = "AB" to 28
+    private val case4 = "ZY" to 701
 
     @Test
     fun titleConversion() {
-//        assertEquals(case1.first, convertToTitle(case1.second))
-//        assertEquals(case2.first, convertToTitle(case2.second))
-//        assertEquals(case3.first, convertToTitle(case3.second))
+        assertEquals(case1.first, convertToTitle(case1.second))
+        assertEquals(case2.first, convertToTitle(case2.second))
+        assertEquals(case3.first, convertToTitle(case3.second))
         assertEquals(case4.first, convertToTitle(case4.second))
-//        assertEquals(case5.first, convertToTitle(case5.second))
     }
 }

@@ -15,12 +15,10 @@ package algorithms.easy
  */
 
 fun convertToTitle(n: Int) = buildString {
-    var div = n
-    var rem = n
-    while (div > 26) {
-        div /= 26
-        rem = if (rem % div > 0) rem % div else 2
-        append((div + 64).toChar())
+    var x = n
+    while (x > 0) {
+        x--
+        append('A' + x % 26)
+        x /= 26
     }
-    append((rem + 64).toChar())
-}
+}.reversed()
