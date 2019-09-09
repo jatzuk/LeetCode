@@ -17,7 +17,7 @@ import org.junit.Test
  *                                           ***___***
  */
 
-class IntersectionOfTwoLinkedLists {
+class IntersectionOfTwoLinkedListsTest {
     private val intersection1 = ListNode(8)
     private val list1 = ListNode(4).apply {
         next = ListNode(1).apply {
