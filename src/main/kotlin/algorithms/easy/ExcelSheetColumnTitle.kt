@@ -17,8 +17,7 @@ package algorithms.easy
 fun convertToTitle(n: Int) = buildString {
     var x = n
     while (x > 0) {
-        x--
-        append('A' + x % 26)
+        append('A' + --x % 26)
         x /= 26
     }
 }.reversed()
