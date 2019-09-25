@@ -14,7 +14,7 @@ package algorithms.easy
  *                                           ***___***
  */
 
-// T = O(n ^ 2); S = O(1)
+// T = O(n ^ k); S = O(1)
 fun rotateNaive(nums: IntArray, k: Int): IntArray {
     repeat(k) {
         val tmp = nums.last()
