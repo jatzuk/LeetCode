@@ -26,4 +26,16 @@ class RotateArrayTest {
         assertArrayEquals(intArrayOf(5, 6, 7, 1, 2, 3, 4), rotateNaive(case1.first, case1.second))
         assertArrayEquals(intArrayOf(3, 99, -1, -100), rotateNaive(case2.first, case2.second))
     }
+
+    @Test
+    fun rotateWithExtraArray() {
+        assertArrayEquals(intArrayOf(5, 6, 7, 1, 2, 3, 4), rotateExtraArray(case1.first, case1.second))
+        assertArrayEquals(intArrayOf(3, 99, -1, -100), rotateExtraArray(case2.first, case2.second))
+    }
+
+    @Test
+    fun rotateReversedTest() {
+        assertArrayEquals(intArrayOf(5, 6, 7, 1, 2, 3, 4), rotateReversed(case1.first, case1.second))
+        assertArrayEquals(intArrayOf(3, 99, -1, -100), rotateReversed(case2.first, case2.second))
+    }
 }
