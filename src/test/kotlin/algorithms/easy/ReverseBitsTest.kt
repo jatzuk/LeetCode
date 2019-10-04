@@ -25,7 +25,7 @@ class ReverseBitsTest {
             java.lang.Long.parseLong("11111111111111111111111111111101", 2).toInt()
 
     @Test
-    fun reverseNaive() {
+    fun reverseBitsTest() {
         assertEquals(case1.first, reverseBits(case1.second))
         assertEquals(case2.first, reverseBits(case2.second))
     }
