@@ -1,5 +1,19 @@
 package algorithms.easy
 
+/*
+ * Created with passion and love
+ *    for project LeetCodePractice
+ *        by Jatzuk on 04.10.2019
+ *                                            *_____*
+ *                                           *_*****_*
+ *                                          *_(O)_(O)_*
+ *                                         **____V____**
+ *                                         **_________**
+ *                                         **_________**
+ *                                          *_________*
+ *                                           ***___***
+ */
+
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
