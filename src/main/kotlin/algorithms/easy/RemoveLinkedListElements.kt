@@ -18,7 +18,7 @@ package algorithms.easy
 @Suppress("NAME_SHADOWING")
 fun removeElements(head: ListNode?, value: Int): ListNode? {
     val helper = ListNode().apply { next = head }
-    var current:ListNode? = helper
+    var current: ListNode? = helper
     while (current?.next != null) {
         if (current.next?.value == value) current.next = current.next?.next
         else current = current.next
