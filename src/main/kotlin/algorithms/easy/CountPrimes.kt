@@ -1,5 +1,7 @@
 package algorithms.easy
 
+import kotlin.math.sqrt
+
 /*
  * Created with passion and love
  *    for project LeetCodePractice
@@ -34,3 +36,16 @@ fun countPrimesFunctional(n: Int) = generateSequence(3) { it + 2 }
     .filter { i -> (3 until i step 2).none { i % it == 0 } }
     .takeWhile { it < n }
     .count() + if (n > 2) 1 else 0
+
+
+// T = O(n log log n); S = O(n)
+fun sieveOfEratosthenes(n: Int): Int {
+    if (n < 3) return 0
+    val sieve = BooleanArray(n - 2)
+    for (i in 2..sqrt(n.toDouble()).toInt()) {
+        if (!sieve[i - 2]) {
+            for (j in 2 * i until n step i) sieve[j - 2] = true
+        }
+    }
+    return sieve.count { !it }
+}

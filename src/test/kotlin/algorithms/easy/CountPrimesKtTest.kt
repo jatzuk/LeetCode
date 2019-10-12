@@ -39,14 +39,12 @@ class CountPrimesKtTest {
     }
 
     @Test
-    fun boo() {
-        measureTime { countPrimesNaive(499979) }
-        measureTime { countPrimesFunctional(499979) }
-    }
-
-    private fun measureTime(block: () -> Unit) {
-        val start = System.currentTimeMillis()
-        block()
-        println("elapsed time: ${System.currentTimeMillis() - start} ms.")
+    fun sieveOfEratosthenes() {
+        assertEquals(4, sieveOfEratosthenes(10))
+        assertEquals(0, sieveOfEratosthenes(2))
+        assertEquals(1, sieveOfEratosthenes(3))
+        assertEquals(2, sieveOfEratosthenes(5))
+        assertEquals(3, sieveOfEratosthenes(7))
+        assertEquals(3, sieveOfEratosthenes(6))
     }
 }
