@@ -1,10 +1,7 @@
 package algorithms.easy
 
+import org.junit.Assert.assertEquals
 import org.junit.Test
-
-import org.junit.Assert.*
-import kotlin.math.pow
-import kotlin.math.sqrt
 
 /*
  * Created with passion and love
