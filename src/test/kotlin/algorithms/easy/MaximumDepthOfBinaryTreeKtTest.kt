@@ -2,6 +2,7 @@ package algorithms.easy
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
+import util.buildBinaryTreeFromUnsortedArray
 
 /*
  * Created with passion and love
@@ -18,18 +19,8 @@ import org.junit.Test
  */
 
 class MaximumDepthOfBinaryTreeKtTest {
-    val tree = TreeNode().apply {
-        left = TreeNode(9)
-        right = TreeNode(20).apply {
-            left = TreeNode(15)
-            right = TreeNode(7)
-        }
-    }
-
-    val tree1 = TreeNode(0).apply {
-        left = TreeNode(1).apply { left = TreeNode(2) }
-        right = TreeNode(1).apply { left = TreeNode(2).apply { TreeNode(3) } }
-    }
+    private val tree = buildBinaryTreeFromUnsortedArray(arrayOf(0, 9, 20, null, null, 15, 7))
+    private val tree1 = buildBinaryTreeFromUnsortedArray(arrayOf(0, 1, 1, 2, null, 2, null))
 
     @Test
     fun maxDepthTest() {

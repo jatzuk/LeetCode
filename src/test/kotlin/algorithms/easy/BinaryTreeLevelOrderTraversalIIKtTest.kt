@@ -2,6 +2,7 @@ package algorithms.easy
 
 import org.junit.Before
 import org.junit.Test
+import util.buildBinaryTreeFromUnsortedArray
 import java.lang.AssertionError
 
 /*
@@ -19,15 +20,8 @@ import java.lang.AssertionError
  */
 
 class BinaryTreeLevelOrderTraversalIIKtTest {
-    val tree = TreeNode(3).apply {
-        left = TreeNode(9)
-        right = TreeNode(20).apply {
-            left = TreeNode(15)
-            right = TreeNode(7)
-        }
-    }
-
-    val target = arrayListOf<MutableList<Int>>()
+    private val tree = buildBinaryTreeFromUnsortedArray(arrayOf(3, 9, 20, null, null, 15, 7))
+    private val target = arrayListOf<MutableList<Int>>()
 
     @Before
     fun setup() {

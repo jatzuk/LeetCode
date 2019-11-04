@@ -2,6 +2,7 @@ package algorithms.easy
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
+import util.buildBinaryTreeFromUnsortedArray
 
 /**
  ** Created with passion and love
@@ -18,35 +19,18 @@ import org.junit.Test
  */
 
 class SymmetricTreeKtTest {
-    val symmetric = TreeNode(1).apply {
-        left = TreeNode(2).apply {
-            left = TreeNode(3)
-            right = TreeNode(4)
-        }
-        right = TreeNode(2).apply {
-            left = TreeNode(4)
-            right = TreeNode(3)
-        }
-    }
-
-    val notSymmetric = TreeNode(1).apply {
-        left = TreeNode(2).apply {
-            right = TreeNode(3)
-        }
-        right = TreeNode(2).apply {
-            right = TreeNode(3)
-        }
-    }
+    private val symmetric = buildBinaryTreeFromUnsortedArray(arrayOf(1, 2, 2, 3, 4, 4, 3))
+    private val nonSymmetric = buildBinaryTreeFromUnsortedArray(arrayOf(1, 2, 2, null, 3, null, 3))
 
     @Test
     fun isSymmetricTest() {
         assertEquals(true, isSymmetric(symmetric))
-        assertEquals(false, isSymmetric(notSymmetric))
+        assertEquals(false, isSymmetric(nonSymmetric))
     }
 
     @Test
     fun isSymmetricIterativelyTest() {
         assertEquals(true, isSymmetricIteratively(symmetric))
-        assertEquals(false, isSymmetricIteratively(notSymmetric))
+        assertEquals(false, isSymmetricIteratively(nonSymmetric))
     }
 }

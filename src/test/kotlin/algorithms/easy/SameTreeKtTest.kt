@@ -18,21 +18,21 @@ import org.junit.Test
  */
 
 class SameTreeKtTest {
-    val tree00 = TreeNode(1).apply {
+    private val tree00 = TreeNode(1).apply {
         left = TreeNode(2)
         right = TreeNode(3)
     }
 
-    val tree01 = TreeNode(1).apply {
+    private val tree01 = TreeNode(1).apply {
         left = TreeNode(2)
         right = TreeNode(3)
     }
 
-    val tree10 = TreeNode(1).apply {
+    private val tree10 = TreeNode(1).apply {
         left = TreeNode(2)
     }
 
-    val tree11 = TreeNode(1).apply {
+    private val tree11 = TreeNode(1).apply {
         right = TreeNode(3)
     }
 

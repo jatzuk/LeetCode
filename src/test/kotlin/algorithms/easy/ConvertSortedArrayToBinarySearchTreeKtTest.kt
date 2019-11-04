@@ -1,6 +1,8 @@
 package algorithms.easy
 
 import org.junit.Test
+import util.assertTreeEquals
+import util.buildBinaryTreeFromUnsortedArray
 
 /* 
  * Created with passion and love
@@ -17,15 +19,10 @@ import org.junit.Test
  */
 
 class ConvertSortedArrayToBinarySearchTreeKtTest {
+    private val expected = buildBinaryTreeFromUnsortedArray(arrayOf(0, -10, 5, null, -3, null, 9))
+
     @Test
     fun sortedArrayToBSTTest() {
-        treeWalk(sortedArrayToBST(intArrayOf(-10, -3, 0, 5, 9)))
-    }
-
-    fun treeWalk(node: TreeNode?) {
-        if (node == null) return
-        treeWalk(node.left)
-        print("${node.value} ")
-        treeWalk(node.right)
+        assertTreeEquals(expected, sortedArrayToBST(intArrayOf(-10, -3, 0, 5, 9)))
     }
 }

@@ -2,6 +2,7 @@ package algorithms.easy
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
+import util.buildBinaryTreeFromUnsortedArray
 
 /* 
  * Created with passion and love
@@ -18,24 +19,8 @@ import org.junit.Test
  */
 
 class BalancedBinaryTreeKtTest {
-    val balanced = TreeNode(3).apply {
-        left = TreeNode(9)
-        right = TreeNode(20).apply {
-            left = TreeNode(15)
-            right = TreeNode(7)
-        }
-    }
-
-    val unbalanced = TreeNode(1).apply {
-        left = TreeNode(2).apply {
-            left = TreeNode(3).apply {
-                left = TreeNode(4)
-                right = TreeNode(4)
-            }
-            right = TreeNode(3)
-        }
-        right = TreeNode(2)
-    }
+    private val balanced = buildBinaryTreeFromUnsortedArray(arrayOf(3, 9, 20, null, 15, 7))
+    private val unbalanced = buildBinaryTreeFromUnsortedArray(arrayOf(1, 2, 2, 3, 3, null, null, 4, 4))
 
     @Test
     fun isBalancedTest() {
