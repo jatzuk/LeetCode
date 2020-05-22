@@ -15,7 +15,7 @@ package explore.learn.arrays101.introduction
  */
 
 // O(n)
-// O(n)
+// O(1)
 fun findNumbers(nums: IntArray): Int {
     var result = 0
 
