@@ -20,7 +20,7 @@ import org.junit.Test
 internal class FindNumbersWithEvenNumberOfDigitsKtTest {
 
     @Test
-    fun findNumbers() {
+    fun findNumbersTest() {
         assertEquals(2, findNumbers(intArrayOf(12, 345, 2, 6, 7896)))
     }
 }

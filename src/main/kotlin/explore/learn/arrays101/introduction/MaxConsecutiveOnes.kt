@@ -14,6 +14,8 @@ package explore.learn.arrays101.introduction
  *                                           ***___***
  */
 
+// O(n)
+// O(n)
 fun findMaxConsecutiveOnes(nums: IntArray): Int {
     var result = 0
     var currentSequence = 0

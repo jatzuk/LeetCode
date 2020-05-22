@@ -21,7 +21,7 @@ import org.junit.Test
 internal class MaxConsecutiveOnesKtTest {
 
     @Test
-    fun findMaxConsecutiveOnes() {
+    fun findMaxConsecutiveOnesTest() {
         assertEquals(3, findMaxConsecutiveOnes(intArrayOf(1, 1, 0, 1, 1, 1)))
     }
 }
