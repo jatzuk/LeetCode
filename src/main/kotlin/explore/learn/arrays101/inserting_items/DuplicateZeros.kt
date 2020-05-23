@@ -38,7 +38,3 @@ fun duplicateZeroesOffset(arr: IntArray): IntArray {
     }
     return arr
 }
-
-fun main() {
-
-}
