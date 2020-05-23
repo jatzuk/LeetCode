@@ -33,10 +33,10 @@ class DuplicateZerosKtTest {
     }
 
     @Test
-    fun duplicateZeroesOffsetTest() {
-        assertArrayEquals(case1.second, duplicateZeroesOffset(case1.first))
-        assertArrayEquals(case2.second, duplicateZeroesOffset(case2.first))
-        assertArrayEquals(case3.second, duplicateZeroesOffset(case3.first))
-        assertArrayEquals(case4.second, duplicateZeroesOffset(case4.first))
+    fun duplicateZerosOffsetTest() {
+        assertArrayEquals(case1.second, duplicateZerosOffset(case1.first))
+        assertArrayEquals(case2.second, duplicateZerosOffset(case2.first))
+        assertArrayEquals(case3.second, duplicateZerosOffset(case3.first))
+        assertArrayEquals(case4.second, duplicateZerosOffset(case4.first))
     }
 }

@@ -30,7 +30,7 @@ fun duplicateZeros(arr: IntArray): IntArray {
 
 // O(n)
 // O(1)
-fun duplicateZeroesOffset(arr: IntArray): IntArray {
+fun duplicateZerosOffset(arr: IntArray): IntArray {
     var duplicateOffset = arr.count { it == 0 } + arr.size
     for (i in arr.lastIndex downTo 0) {
         if (--duplicateOffset < arr.size) arr[duplicateOffset] = arr[i]
