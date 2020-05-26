@@ -1,4 +1,4 @@
-package explore.learn.arrays101.inserting_items
+package explore.learn.arrays101.inserting
 
 /* 
  * Created with passion and love

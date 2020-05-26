@@ -1,4 +1,4 @@
-package explore.learn.arrays101.inserting_items
+package explore.learn.arrays101.inserting
 
 import org.junit.Assert.assertArrayEquals
 import org.junit.Test
