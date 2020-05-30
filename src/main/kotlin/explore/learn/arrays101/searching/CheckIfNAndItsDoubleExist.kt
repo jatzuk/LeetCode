@@ -1,4 +1,4 @@
-package explore.learn.arrays101.deleting
+package explore.learn.arrays101.searching
 
 /*
  * Created with passion and love
